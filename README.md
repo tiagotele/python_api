@@ -26,7 +26,24 @@ pip install "uvicorn[standard]"
 
 Inicie a aplicação
 ```bash
- uvicorn api:app --reload
+ uvicorn app.api:app --reload
+```
+
+Acesse o browser no endereço: http://localhost:8000/
+
+
+## Execução via Docker
+
+```bash
+export DOCKER_SCAN_SUGGEST=false
+```
+
+```bash
+docker build -t myimage .
+```
+
+```bash
+docker run --name mycontainer -p 80:80 myimage
 ```
 
 Acesse o browser no endereço: http://localhost:8000/
