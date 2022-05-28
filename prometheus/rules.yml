@@ -1,0 +1,19 @@
+groups:
+  - name: simple_alert
+    rules:
+      - alert: PythonAPI
+        expr: up
+        for: 3m
+        labels:
+          severity: critical
+        annotations:
+          summary: Example of sumary
+          runbook: https://github.com/tiagotele/python_api
+      - alert: ManyAboutCalls
+        expr: sum(increase(about_call_total[1m])) >= 5
+        for: 3m
+        labels:
+          severity: critical
+        annotations:
+          summary: Many api calls to about endpoint
+          runbook: https://github.com/tiagotele/python_api
