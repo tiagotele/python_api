@@ -8,7 +8,7 @@ Instrumentator().instrument(app).expose(app)
 about_counter = Counter(
     "about_call",
     "Number of times about endpoint was called.",
-    labelnames=("about",)
+    labelnames=("about")
 )
 
 @app.get("/")
