@@ -39,11 +39,14 @@ export DOCKER_SCAN_SUGGEST=false
 ```
 
 ```bash
-docker build -t myimage .
+docker build -t tiagotele/python_api .
 ```
 
 ```bash
-docker run --name mycontainer -p 80:80 myimage
+docker run --name mycontainer -p 80:80 tiagotele/python_api
 ```
 
 Acesse o browser no endereço: http://localhost:8000/
+
+### Docker image
+Docker image are available at [DockerHub](https://hub.docker.com/repository/docker/tiagotele/python_api).
