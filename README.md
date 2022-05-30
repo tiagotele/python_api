@@ -43,7 +43,7 @@ docker build -t tiagotele/python_api .
 ```
 
 ```bash
-docker run --name mycontainer -p 80:80 tiagotele/python_api
+docker run -p 80:80 tiagotele/python_api
 ```
 
 Acesse o browser no endereço: http://localhost:8000/
