@@ -1,0 +1,7 @@
+name: Assignment
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: docker run docker/whalesay cowsay
