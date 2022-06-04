@@ -20,13 +20,12 @@ source venv/Scripts/activate
 
 Instale dependências do framework FastApi
 ```bash
-pip install "fastapi[all]"
-pip install "uvicorn[standard]"
+pip install -r requirements.txt
 ```
 
 Inicie a aplicação
 ```bash
- uvicorn app.api:app --reload
+uvicorn app.api:app --reload
 ```
 
 Acesse o browser no endereço: http://localhost:8000/
@@ -46,7 +45,7 @@ docker build -t tiagotele/python_api .
 docker run -p 80:80 tiagotele/python_api
 ```
 
-Acesse o browser no endereço: http://localhost:8000/
+Acesse o browser no endereço: http://localhost
 
 ### Docker image
 Docker image are available at [DockerHub](https://hub.docker.com/repository/docker/tiagotele/python_api).
