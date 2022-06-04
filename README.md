@@ -49,3 +49,4 @@ Acesse o browser no endereço: http://localhost
 
 ### Docker image
 Docker image are available at [DockerHub](https://hub.docker.com/repository/docker/tiagotele/python_api).
+
