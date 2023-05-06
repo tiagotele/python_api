@@ -5,7 +5,7 @@ Exemplo de API Rest com Python
 ## Para executar localmente
 Crie um ambiente virutal Python
 ```bash
-python -m venv venv
+python3 -m venv venv
 ```
 
 Ative esse abiente no Linux:
@@ -50,3 +50,8 @@ Acesse o browser no endereço: http://localhost
 ### Docker image
 Docker image are available at [DockerHub](https://hub.docker.com/repository/docker/tiagotele/python_api).
 
+## Docker compose
+Para rodar a aplicação principal juntaente como Prometheus basta subir tudo com docker-compose:
+```bash
+docker-compose up
+```
