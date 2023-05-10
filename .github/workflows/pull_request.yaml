@@ -1,0 +1,15 @@
+name: pull_request_pipeline
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Unit Test
+      run: |
+        make unit_test
+    
