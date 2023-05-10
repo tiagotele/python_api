@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from prometheus_fastapi_instrumentator import Instrumentator
 from prometheus_client import Counter
+from fastapi.testclient import TestClient
 
 app = FastAPI()
 Instrumentator().instrument(app).expose(app)
@@ -13,9 +14,11 @@ about_counter = Counter(
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"Message": "Hello World"}
 
 @app.get("/about")
-async def root():
+async def about():
     about_counter.labels('about').inc()
     return {"About": "Unifametro class"}
+
+client = TestClient(app)
