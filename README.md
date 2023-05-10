@@ -55,3 +55,8 @@ Para rodar a aplicação principal juntaente como Prometheus basta subir tudo co
 ```bash
 docker-compose up
 ```
+
+## Execução de testes unitários
+```bash
+make unit_test
+```
