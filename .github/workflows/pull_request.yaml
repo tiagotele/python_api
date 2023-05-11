@@ -12,12 +12,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       
-      # - name: Setup Python
-      #   uses: actions/setup-python@v4
-      #   with:
-      #     python-version: '3.8.10' 
-      #     architecture: 'x64'
-
       - name: Install libs
         run: pip install -r requirements.txt
 
@@ -25,3 +19,9 @@ jobs:
         run: |
           make unit_tests
     
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag tiagotele/python_api:$(date +%y-%m-%d_%H-%M)
+    
+      - name: List Docker images
+        run: docker images
+
