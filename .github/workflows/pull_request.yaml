@@ -40,4 +40,4 @@ jobs:
 
       - name: Run local k6 test
         run: |
-          ./k6 run -e MY_HOSTNAME=http://localhost:80 k6/performance.js
+          ./k6 run -e MY_HOSTNAME=http://localhost:80 k6_scripts/performance.js
