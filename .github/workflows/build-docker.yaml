@@ -16,6 +16,6 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag samuelportodossantos/python_api:$(date +%y-%m-%d_%H-%M)
+      run: docker build . --file Dockerfile --tag supermoykadev/python_api:$(date +%y-%m-%d_%H-%M)
     - name: Docker push
-      run: docker push samuelportodossantos/python_api:$(date +%y-%m-%d_%H-%M)
+      run: docker push supermoykadev/python_api:$(date +%y-%m-%d_%H-%M)
