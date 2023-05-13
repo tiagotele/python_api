@@ -14,7 +14,7 @@ about_counter = Counter(
 
 @app.get("/")
 async def root():
-    return {"Message": "Hello World"}
+    return {"Message": "Muito top tentativa 2!"}
 
 @app.get("/about")
 async def about():
