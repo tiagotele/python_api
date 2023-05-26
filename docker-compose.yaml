@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3.9"
 services:
   
   app:
@@ -8,10 +8,29 @@ services:
     restart: always
     ports:
       - "8080:80"
+    networks:
+      - metrics
 
   prometheus:
     image: prom/prometheus
+    user: root
     ports:
       - 9090:9090
     volumes:
       - ./prometheus/:/etc/prometheus/
+    networks:
+      - metrics
+
+  grafana:
+    image: grafana/grafana:9.5.2
+    container_name: grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    ports:
+      - 3000:3000
+    networks:
+      - metrics
+
+networks:
+  metrics:
+    driver: bridge
