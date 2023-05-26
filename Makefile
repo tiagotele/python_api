@@ -12,3 +12,7 @@ unit_tests:
 
 compose_up:
 	docker-compose up
+
+call_home_10_times:
+	for i in 1 2 3 4 5; curl localhost:8080; done
+		
