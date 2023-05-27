@@ -26,5 +26,6 @@ async def root():
 async def about():
     about_counter.labels('about').inc()
     return {"About": "Unifametro class"}
+    
 
 client = TestClient(app)
